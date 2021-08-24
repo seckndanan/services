@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAB 3S &mdash; Bienvenue dans FAB SECURITY SERVICES</title>
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="shortcut icon" type="image/png" href="./static/img/FAB3S.jpg"/>
+
+
+    <!--[if lt IE 9]>
+    <script src="{% static 'js/vendor/html5shiv.min.js' %}"></script>
+    <script src="{% static 'js/vendor/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- START: header -->
+
+  <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <img src="{% static 'img/3S.PNG' %}">
+
+
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li class=""><a href="{% url 'Acceuil' %}">Accueil</a></li>
+            <li><a href="{% url 'Apropos' %}">A propos de</a></li>
+            <li><a href="{% url 'Partenaire' %}">Partenaire</a></li>
+            <li><a href="{% url 'Contact' %}">Contact</a></li>
+          </ul>
+          <div class="extra-text visible-xs">
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Address</h5>
+            <p>Senegal DAKAR /pole urbain de Diamniadio</p>
+            <h5>Connect</h5>
+            <ul class="social-buttons">
+              <li><a href="https://twitter.com/FAB_3S"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://web.facebook.com/FABsafsecu/"><i class="icon-facebook2"></i></a></li>
+              <li><a href="https://www.instagram.com/fab3s_officiel/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+
+  {% block body %}
+  {% block corp %}
+  {% block men %}
+  {% block main %}
+  {% block code %}
+  {% block man %}
+
+
+  {% endblock man %}
+  {% endblock code %}
+  {% endblock main %}
+  {% endblock men %}
+  {% endblock corp %}
+  {% endblock body %}
+
+
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url(static/img/aii.jpg)">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">APROPOS</h4>
+            <p>FAB SAFETY SECURITY SERVICE est une entreprise specialisée dans les domaines des prestations de service de securité incendie et de la sureté dans les installations et les batiments. </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">REJOIGNER-NOUS</h4>
+            <ul class="stack-link">
+              <li><a href="https://web.facebook.com/FABsafsecu/">FACEBOOK</a></li>
+              <li><a href="https://www.instagram.com/fab3s_officiel/">INSTAGRAM</a></li>
+              <li><a href="#">LINKDIN</a></li>
+              <li><a href="https://twitter.com/FAB_3S">TWEETER</a></li>
+              <li><a href="#">WHATSAPP</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Partenaire </h4>
+            <ul class="stack-link">
+              <li><a href="https://senegindia.sn/">SENEGINDIA <small>(PROPRIETES)</small></a></li>
+              <li><a href="https://www.total.sn/">TOTAL <small>(CARBURANT)</small></a></li>
+              <li><a href="https://teyliomproperties.com/">TELIOM<small>(BATIMENT)</small></a></li>
+              <li><a href="https://web.facebook.com/KFCsenegal/?_rdc=1&_rdr">KFC <small>(RESTAURATION)</small></a></li>
+              <li><a href="https://www.sante.gouv.sn/">MSAS<small>(SANTE)</small></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">vos besoins</h4>
+            <p>Merci d'avoir connecter sur la page FAB SAFETY SECURITY SERVICE ,dites-nous en quoi nous pouvons vous aider.</p>
+            <form action="#">
+              <div class="form-field">
+                <button class="btn btn-subscribe"><a href="{% url 'Contact' %}">Contact</a></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2017 <a href="https://FAB-3S.com/">FAB 3S</a>. DISIGNER PAR <a href="https://FAB-3S.com/">SECK NDANANE</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="https://twitter.com/FAB_3S"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://web.facebook.com/FABsafsecu/"><i class="icon-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/fab3s_officiel/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+
+  <script src="{% static 'js/scripts.min.js ' %}"></script>
+  <script src="{% static 'js/main.min.js ' %}"></script>
+  <script src="{% static 'js/custom.js ' %}"></script>
+
+  </body>
+</html>

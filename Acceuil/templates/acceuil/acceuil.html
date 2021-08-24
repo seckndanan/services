@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block men %}
+{% load static %}
+
+<section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="#">Home</a><span>Agents</span>
+              </div>
+              <h1><marquee>Bienvenue dans FAB SAFETY SECURITY SERVICE !</marquee></h1>
+              <p>
+               <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/omzo.seck.7/"><i class="icon-facebook2"></i></a></li>
+              <li><a href="https://www.instagram.com/seckndanane2040/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url(static/img/service.png);"></li>
+      <li style="background-image: url(static/img/toph.png);"></li>
+      <li style="background-image: url(static/img/service.png);"></li>
+    </ul>
+  </section>
+
+  <!-- END: slider  -->
+
+  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Venez visiter nos Services</h2>
+      </div>
+      <div class="row">
+        {% for acceuil in acceuil_list %}
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{{acceuil.image.url}}" class="img-responsive" alt="seckndanane">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">{{acceuil.nom}}</h2>
+              <p><small>{{acceuil.type}}</small></p>
+            </div>
+          </div>
+        </div>
+         {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(static/img/service.png);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Pourquoi nous choisir</p>
+      <h3 class="mt0 mb40">Vous allez adorer nos services</h3>
+      <p>Mettant toujours la satisfaction de nos clients au centre de nos préoccupations, notre démarche contrôle qualité se veut objective en adaptant le service rendu à son usager au meilleur cout.</p>
+      <p class="mb50">Nous sommes prêt à vous accompagner à avoir un système de sécurité performant. Notre expertise, au service de votre quotidien.</p>
+      <p><a href="#" class="btn btn-primary mb10">Find out more</a></p>
+    </div>
+  </section>
+
+{% endblock %}

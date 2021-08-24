@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block code %}
+
+<section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="#">Domicile</a><span>Environ</span>
+              </div>
+              <h1><marquee>Qui sommes-nous</marquee></h1>
+              <p>
+               <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/omzo.seck.7/"><i class="icon-facebook2"></i></a></li>
+              <li><a href="https://www.instagram.com/seckndanane2040/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url(static/img/FAB3S.jpg);"></li>
+      <li style="background-image: url(static/img/service1.png);"></li>
+      <li style="background-image: url(static/img/service2.png);"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+<section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <br>
+        </br>
+        <h2 class="mt0 mb50 text-center">L'EQUIPE ADMINISTRATIVE</h2>
+      </div>
+      <div class="row">
+        {% for apropos in apropos_list %}
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="{{apropos.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">{{apropos.surnom}}</a></h2>
+              <div class="probootstrap-listing-location">
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>Poste occupé</span></div>
+              <div class="probootstrap-listing-price"><strong> {{apropos.desc}}</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row heading">
+        <div class="col-md-12"><h2 class="mt0 mb50 text-center">Notre société</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p><img src="static/img/toph.png" class="img-responsive" alt="isepdiamniadio.com"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Notre Mission</h2>
+          <p>Mettant toujours la satisfaction de nos clients au centre de nos préoccupation, notre démarche controle qualité se veut objective en adaptant le service rendu à son usager au meilleur cout . Nous sommes pret à vous accompagner à avoir un systeme de sécurité performant. Notre expertise , au service de votre quotidien . </p>
+        </div>
+        <div class="col-md-6">
+          <h2>Notre Vision</h2>
+          <p>Prévenir les risques d'incendie pour assurer la protection des biens et des personnes doit etre une priorité absolue </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-half">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(static/img/service.png);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">En savoir plus</p>
+      <h3 class="mt0 mb40">Historique de l’entreprise</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p class="mb50">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      <p><a href="#" class="btn btn-primary mb10">Find out more</a></p>
+    </div>
+  </section>
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(static/img/service1.png);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Pourquoi nous choisir</p>
+      <h3 class="mt0 mb40">Vous adorerez nos services</h3>
+      <p>La prévention contre les risques dans les Etablissements Recevant du Public (ERP), les Immeubles de Grande Hauteur (IGH), les Bâtiments d’Habitation et les Installations Classées Pour la Protection de l’Environnement (ICPE)</p>
+      <p class="mb50">La formation des agents de sécurité des entreprises industrielles, des Etablissements Recevant du Public (ERP), des Immeubles de Grande Hauteur(IGH), Installations Classées pour la Protection de l’Environnement (I.C.P.E),</p>
+      <p><a href="#" class="btn btn-primary mb10">En Savoir Plus</a></p>
+    </div>
+  </section>
+
+  <section class="probootstrap-half">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(static/img/service2.png);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Réalisations</p>
+      <h3 class="mt0 mb40">Nos réalisations</h3>
+      <p>La protection Incendie, La fourniture et l’installation de Matériels de lutte contre l’Incendie L’assistance pour l’élaboration des plans d’opération interne et des secours d’urgence, La conception et la mise en œuvre des scenarii des Plans D’Opérations Internes (POI)</p>
+      <p class="mb50">La Formation en MANAGEMENT DE CRISE après conception des EDD et POI Le conseil et l’accompagnement des entreprises en Sécurité Hygiène et Environnement, L’assistance et le conseil dans les démarches de politiques de sécurité,.</p>
+      <p><a href="#" class="btn btn-primary mb10">En Savoir Plus</a></p>
+    </div>
+  </section>
+
+{% endblock %}

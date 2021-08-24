@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="#">Home</a><span>Agents</span>
+              </div>
+              <h1><marquee>Ils nous font confiance</marquee></h1>
+              <p>
+               <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/omzo.seck.7/"><i class="icon-facebook2"></i></a></li>
+              <li><a href="https://www.instagram.com/seckndanane2040/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url(static/img/FAB3S.jpg);"></li>
+      <li style="background-image: url(static/img/toph.png);"></li>
+      <li style="background-image: url(static/img/service.png);"></li>
+    </ul>
+  </section>
+
+<section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <br>
+        </br>
+        <h2 class="mt0 mb50 text-center">NOS PARTENAIRES</h2>
+      </div>
+      <div class="row">
+        {% for partenaire in partenaire_list %}
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="{{partenaire.image.url}}" class="img-responsive" alt="FAB 3S">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">{{partenaire.nom}}</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>{{partenaire.description}}</span>
+              </div>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Explorez nos partenaires</h2>
+      </div>
+        {% for partenaire in partenaire_list %}
+      <div class="row probootstrap-gutter10">
+        <div class="col-md-6 col-sm-6">
+          <a href="#" class="probootstrap-hover-overlay">
+            <img src="{{partenaire.image.url}}" alt="FAB 3S" class="img-responsive">
+            <div class="probootstrap-text-overlay">
+              <h3>{{partenaire.nom}}</h3>
+              <p>{{partenaire.description}}</p>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
